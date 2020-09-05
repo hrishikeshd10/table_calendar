@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c753322-24b8-4dd2-83c2-16e0e3e15524" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/calendar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/calendar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/widgets/custom_icon_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/widgets/custom_icon_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table_calendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/table_calendar.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +29,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -48,5 +46,15 @@
       <updated>1599211046820</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599316562949">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="0" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1599316562949" />
+    <state x="0" y="23" key="SettingsEditor" timestamp="1599316565758">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="0" y="23" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1599316565758" />
   </component>
 </project>
