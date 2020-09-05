@@ -344,8 +344,8 @@ class _TableCalendarState extends State<TableCalendar>
 
   bool _isDayUnavailable(DateTime day) {
     return (widget.startDay != null &&
-        day.isBefore(
-            widget.calendarController._normalizeDate(widget.startDay))) ||
+            day.isBefore(
+                widget.calendarController._normalizeDate(widget.startDay))) ||
         (widget.endDay != null &&
             day.isAfter(
                 widget.calendarController._normalizeDate(widget.endDay))) ||
@@ -386,11 +386,11 @@ class _TableCalendarState extends State<TableCalendar>
     final children = [
       widget.headerStyle.showLeftChevron
           ? _CustomIconButton(
-        icon: widget.headerStyle.leftChevronIcon,
-        onTap: _selectPrevious,
-        margin: widget.headerStyle.leftChevronMargin,
-        padding: widget.headerStyle.leftChevronPadding,
-      )
+              icon: widget.headerStyle.leftChevronIcon,
+              onTap: _selectPrevious,
+              margin: widget.headerStyle.leftChevronMargin,
+              padding: widget.headerStyle.leftChevronPadding,
+            )
           : Container(),
       Expanded(
         child: GestureDetector(
@@ -399,9 +399,9 @@ class _TableCalendarState extends State<TableCalendar>
           child: Text(
             widget.headerStyle.titleTextBuilder != null
                 ? widget.headerStyle.titleTextBuilder(
-                widget.calendarController.focusedDay, widget.locale)
+                    widget.calendarController.focusedDay, widget.locale)
                 : DateFormat.yMMMM(widget.locale)
-                .format(widget.calendarController.focusedDay),
+                    .format(widget.calendarController.focusedDay),
             style: widget.headerStyle.titleTextStyle,
             textAlign: widget.headerStyle.centerHeaderTitle
                 ? TextAlign.center
@@ -411,11 +411,11 @@ class _TableCalendarState extends State<TableCalendar>
       ),
       widget.headerStyle.showRightChevron
           ? _CustomIconButton(
-        icon: widget.headerStyle.rightChevronIcon,
-        onTap: _selectNext,
-        margin: widget.headerStyle.rightChevronMargin,
-        padding: widget.headerStyle.rightChevronPadding,
-      )
+              icon: widget.headerStyle.rightChevronIcon,
+              onTap: _selectNext,
+              margin: widget.headerStyle.rightChevronMargin,
+              padding: widget.headerStyle.rightChevronPadding,
+            )
           : Container()
     ];
 
@@ -456,9 +456,9 @@ class _TableCalendarState extends State<TableCalendar>
       return AnimatedSize(
         duration: Duration(
             milliseconds:
-            widget.calendarController.calendarFormat == CalendarFormat.month
-                ? 330
-                : 220),
+                widget.calendarController.calendarFormat == CalendarFormat.month
+                    ? 330
+                    : 220),
         curve: Curves.fastOutSlowIn,
         alignment: Alignment(0, -1),
         vsync: this,
@@ -534,8 +534,8 @@ class _TableCalendarState extends State<TableCalendar>
       transitionBuilder: (child, animation) {
         return SlideTransition(
           position: Tween<Offset>(
-              begin: Offset(widget.calendarController._dx, 0),
-              end: Offset(0, 0))
+                  begin: Offset(widget.calendarController._dx, 0),
+                  end: Offset(0, 0))
               .animate(animation),
           child: child,
         );
@@ -578,12 +578,12 @@ class _TableCalendarState extends State<TableCalendar>
     return TableRow(
       decoration: widget.daysOfWeekStyle.decoration,
       children:
-      widget.calendarController._visibleDays.value.take(7).map((date) {
+          widget.calendarController._visibleDays.value.take(7).map((date) {
         final weekdayString = widget.daysOfWeekStyle.dowTextBuilder != null
             ? widget.daysOfWeekStyle.dowTextBuilder(date, widget.locale)
             : DateFormat.E(widget.locale).format(date).substring(0, 1);
         final isWeekend =
-        widget.calendarController._isWeekend(date, widget.weekendDays);
+            widget.calendarController._isWeekend(date, widget.weekendDays);
 
         if (isWeekend && widget.builders.dowWeekendBuilder != null) {
           return widget.builders.dowWeekendBuilder(context, weekdayString);
@@ -592,7 +592,7 @@ class _TableCalendarState extends State<TableCalendar>
           return widget.builders.dowWeekdayBuilder(context, weekdayString);
         }
         return Container(
-          height: 40,
+          height: 10,
           child: Center(
             child: Text(
               weekdayString,
@@ -710,9 +710,9 @@ class _TableCalendarState extends State<TableCalendar>
     final tIsHoliday = widget.calendarController.visibleHolidays
         .containsKey(_getHolidayKey(date));
     final tIsWeekend =
-    widget.calendarController._isWeekend(date, widget.weekendDays);
+        widget.calendarController._isWeekend(date, widget.weekendDays);
     final tIsEventDay =
-    widget.calendarController.visibleEvents.containsKey(eventKey);
+        widget.calendarController.visibleEvents.containsKey(eventKey);
 
     final isUnavailable =
         widget.builders.unavailableDayBuilder != null && tIsUnavailable;
@@ -769,8 +769,8 @@ class _TableCalendarState extends State<TableCalendar>
           context, date, widget.calendarController.visibleEvents[eventKey]);
     } else {
       return Container(
-        height: 50,
-        width: 60,
+        height: 30,
+        width: 50,
         child: _CellWidget(
           text: '${date.day}',
           isUnavailable: tIsUnavailable,
