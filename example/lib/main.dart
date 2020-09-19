@@ -215,44 +215,42 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   // Simple TableCalendar configuration (using Styles)
   Widget _buildTableCalendar() {
-    return Container(
-      color: Color(0xffF9F9F9),
-      child: TableCalendar(
-        calendarController: _calendarController,
-        availableCalendarFormats: const {
-          CalendarFormat.month: 'Month',
-        },
-        events: _events,
-        holidays: _holidays,
-        startingDayOfWeek: StartingDayOfWeek.monday,
-        daysOfWeekStyle: DaysOfWeekStyle(
-            weekdayStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
-            weekendStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
-            decoration: BoxDecoration(
-              color: Color(0xffEEEEEE),
-            )),
-        calendarStyle: CalendarStyle(
-            markersMaxAmount: 4,
-            weekdayStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
-            weekendStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
-            eventDayStyle: TextStyle(
-                fontSize: 17, fontWeight: FontWeight.bold, color: Colors.red),
-            markersAlignment: Alignment.bottomCenter,
-            selectedColor: Color(0xff647CC3),
-            todayColor: Colors.deepOrange[200],
-            markersColor: Colors.brown[700],
-            outsideDaysVisible: true,
-            cellMargin: EdgeInsets.symmetric(horizontal: 2)),
-        headerStyle: HeaderStyle(
-            headerMargin: EdgeInsets.only(left: 8, right: 8),
-            titleTextStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.5),
-            formatButtonVisible: false,
-            leftChevronPadding: EdgeInsets.only(bottom: 2),
-            rightChevronPadding: EdgeInsets.only(bottom: 2),
+    return TableCalendar(
+      calendarController: _calendarController,
+      availableCalendarFormats: const {
+        CalendarFormat.month: 'Month',
+      },
+      events: _events,
+      holidays: _holidays,
+      startingDayOfWeek: StartingDayOfWeek.monday,
+      daysOfWeekStyle: DaysOfWeekStyle(
+          weekdayStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+          weekendStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+          decoration: BoxDecoration(
+            color: Color(0xffEEEEEE),
+          )),
+      calendarStyle: CalendarStyle(
+          markersMaxAmount: 4,
+          weekdayStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+          weekendStyle: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+          eventDayStyle: TextStyle(
+              fontSize: 17, fontWeight: FontWeight.bold, color: Colors.red),
+          markersAlignment: Alignment.bottomCenter,
+          selectedColor: Color(0xff647CC3),
+          todayColor: Colors.deepOrange[200],
+          markersColor: Colors.brown[700],
+          outsideDaysVisible: true,
+          cellMargin: EdgeInsets.symmetric(horizontal: 2)),
+      headerStyle: HeaderStyle(
+          headerMargin: EdgeInsets.only(left: 8, right: 8),
+          titleTextStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5),
+          formatButtonVisible: false,
+          leftChevronPadding: EdgeInsets.only(bottom: 2),
+          rightChevronPadding: EdgeInsets.only(bottom: 2),
 
 //        formatButtonTextStyle:
 //            TextStyle().copyWith(color: Colors.white, fontSize: 15.0),
@@ -261,16 +259,14 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 //          borderRadius: BorderRadius.circular(16.0),
 //        ),
 
-            decoration: BoxDecoration(
-                color: Color(0xff647CC3),
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(13),
-                    topRight: Radius.circular(25))),
-            centerHeaderTitle: true),
-        onDaySelected: _onDaySelected,
-        onVisibleDaysChanged: _onVisibleDaysChanged,
-        onCalendarCreated: _onCalendarCreated,
-      ),
+          decoration: BoxDecoration(
+              color: Color(0xff647CC3),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(13), topRight: Radius.circular(25))),
+          centerHeaderTitle: true),
+      onDaySelected: _onDaySelected,
+      onVisibleDaysChanged: _onVisibleDaysChanged,
+      onCalendarCreated: _onCalendarCreated,
     );
   }
 

@@ -592,8 +592,7 @@ class _TableCalendarState extends State<TableCalendar>
           return widget.builders.dowWeekdayBuilder(context, weekdayString);
         }
         return Container(
-          height: 35,
-          width: 35,
+          height: 30,
           child: Center(
             child: Text(
               weekdayString,
@@ -770,9 +769,8 @@ class _TableCalendarState extends State<TableCalendar>
           context, date, widget.calendarController.visibleEvents[eventKey]);
     } else {
       return Container(
-        // color: Colors.lightGreenAccent,
         height: 50,
-        width: 60,
+        width: 50,
         child: _CellWidget(
           text: '${date.day}',
           isUnavailable: tIsUnavailable,
